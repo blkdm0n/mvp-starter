@@ -10,27 +10,32 @@ class App extends React.Component {
     //dummy data is here for now...needs to move to database
       snakes: [
         {
-          species: 'King Cobra', 
+          //species: 'King Cobra',
+          link: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-NxFQ5w1eW7JiobvVm3ppsR62eMtPN1fIK6XOAfEaHr9dHuxPQ` 
           //link: `http://toxicology.ucsd.edu/Snakebite%20Protocols/Ophiopha.htm`, 
           //notes: `Have a MINIMUM of 10 vials minimum of Tiger Snake Antivenom available`
         },
         {
-          species: 'Black Mamba', 
+          //species: 'Black Mamba',
+          link: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-NxFQ5w1eW7JiobvVm3ppsR62eMtPN1fIK6XOAfEaHr9dHuxPQ`  
           //link: `http://toxicology.ucsd.edu/Snakebite%20Protocols/Dendroa3.htm`, 
           //notes: `Have a MINIMUM of 10 vials of SAIMR Polyvalent Antivenom available`
         },
         {
-          species: 'Fer De Lance', 
+          //species: 'Fer De Lance',  
+          link: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-NxFQ5w1eW7JiobvVm3ppsR62eMtPN1fIK6XOAfEaHr9dHuxPQ`  
           //link: `http://toxicology.ucsd.edu/Snakebite%20Protocols/Bothrops.htm`, 
           //notes: `Have a MINIMUM of 20 vials of Wyeth Crotalidae Polyvalent Antivenom`
         },
         {
-          species: 'Coastal Taipan', 
+          //species: 'Coastal Taipan',
+          link: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-NxFQ5w1eW7JiobvVm3ppsR62eMtPN1fIK6XOAfEaHr9dHuxPQ`  
           //link: `http://toxicology.ucsd.edu/Snakebite%20Protocols/Oxyura~2.htm`, 
           //notes: `Have a MINIMUM of 10 vials of Taipan Antivenom available`
         },
         {
-          species: 'Western Green Mamba', 
+          //species: 'Western Green Mamba', 
+          link: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-NxFQ5w1eW7JiobvVm3ppsR62eMtPN1fIK6XOAfEaHr9dHuxPQ` 
           //link: `http://toxicology.ucsd.edu/Snakebite%20Protocols/Dendroa4.htm`, 
           //notes: `Have a MINIMUM of 10 vials of Taipan Antivenom available`
         }

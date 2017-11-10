@@ -2,9 +2,9 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    <h3>Species: 
-      {props.item.species}
-    </h3>
+    <a href="#">
+      <img src={props.item.link}/> 
+    </a>  
   </div>
 )
 
