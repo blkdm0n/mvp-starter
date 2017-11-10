@@ -3,9 +3,9 @@ import ListItem from './ListItem.jsx';
 
 const List = (props) => (
   <div>
-    <h4> List Component </h4>
-    There are { props.items.length } items.
-    { props.items.map(item => <ListItem item={item}/>)}
+    <h4> Venomous Snake Collection </h4>
+    There are { props.snakes.length } Snakes in your collection.
+    { props.snakes.map((snake, index) => <ListItem key ={index} item={snake}/>)}
   </div>
 )
 
