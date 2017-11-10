@@ -17,27 +17,39 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > SnakeByte
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > An application that allows venomous reptile keepers to quickly access bite protocols for the animals in their collection.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > As a responsible venomous reptile keep being prepared is priority number one.  You've gone to great lengths to protect yourself, your family and your neighbors from being endangered but accidents happen and when they do be prepared!  With this application all the established medical protocols for treating venomous snake bites are saved.  In the even you are bitten, the application will retrieve all the pertinent data needed by medical staff to ensure a positive outcome.  After a bite time is of the essence and most ER's will have no clue in how to treat a serious bite from a non-native reptile.  With this, you can ensure that you receive the correct medical treatment //reword this!!!!
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Venomous keepers make every effort to guard against being bitten, however accidents can and will happen.  After a bite, a keeper may have only a few minutes to prepare after an envenomation. 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > This app can help by allowing a keeper to select the snake that bit them and retrieve its bite treatment protocol so that it can be provided to medical staff.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > "This app is a life-saver, LITERALLY!!!" - Bernard Kitchens, CEO of OMG I'm Bitten, LLC
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > This user friendly app lets you quickly enter your collection information and retrieves the data in the event of an envenomation.
 
 ## Customer Quote ##
+  > "After a really bad bite from a Black Mamba, I selected it from the collection list, yelled for my wife and then blacked out.  Luckily, the paramedics and the hospital that treated me knew exactly what to do.  I owe SnakeByte my life!  Thanks OMG I'm Bitten, LLC you guys rock!!!" - Some Lucky Not Dead Guy
+
+
+
+
+
+ 
+
+
+
+
+
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
