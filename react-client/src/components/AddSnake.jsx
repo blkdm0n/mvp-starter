@@ -25,20 +25,17 @@ class AddSnake extends React.Component {
 
   handleSubmit(event) {
       event.preventDefault();
+      //add an ajax request to submit the data 
       console.log(this.state.formValues);
   }
 
   render(){
   return (
   <form onSubmit={this.handleSubmit}>
-    <input type="text" name="species" placeholder="Enter the species here" value={this.state.formValues["species"]} onChange={this.handleChange} />
-    <br/>
-    <input type="text" name="photoLink" placeholder="Enter URL address for photo" value={this.state.formValues["photoLink"]} onChange={this.handleChange}/>
-    <br/>
-    <input type="text" name="biteProtocol" placeholder="Enter the bite protocol URL here" value={this.state.formValues["biteProtocol"]} onChange={this.handleChange} />
-    <br/>
-    <input type="text" name="notes" placeholder="Enter additional notes here" value={this.state.formValues["notes"]} onChange={this.handleChange} />
-    <br/>
+    <input type="text" name="species" placeholder="Enter the species here" value={this.state.formValues["species"]} onChange={this.handleChange} /><br/>
+    <input type="text" name="photoLink" placeholder="Enter URL address for photo" value={this.state.formValues["photoLink"]} onChange={this.handleChange}/><br/>
+    <input type="text" name="biteProtocol" placeholder="Enter the bite protocol URL here" value={this.state.formValues["biteProtocol"]} onChange={this.handleChange} /><br/>
+    <input type="text" name="notes" placeholder="Enter additional notes here" value={this.state.formValues["notes"]} onChange={this.handleChange} /><br/>
     <input className="btn btn-primary" type="submit" value="Submit" />
   </form>
   )
