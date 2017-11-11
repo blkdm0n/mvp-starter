@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bitten = () => (
+const Bitten = (props) => (
   <div>
     <h1>CALL 911 YOU'VE BEEN BITTEN!!!!</h1>
     <iframe src="http://toxicology.ucsd.edu/Snakebite%20Protocols/Ophiopha.htm"></iframe>

@@ -10,8 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = { 
     //dummy data was here for now...needs to move to database
-    //data moved to a json file retrieved by 'GET' request
-      snakes: []
+    //data moved to a json file in server retrieved by 'GET' request
+      snakes: [],
+      isBitten: true
     }
   }
 
@@ -30,12 +31,20 @@ class App extends React.Component {
     });
   }
 
-  render () {
+
+render() {
+  if (this.state.isBitten) {
+    return (
+    <div>
+      <h1>SNAKEBYTE</h1>
+      <Bitten/>
+    </div>
+    )
+  } 
     return (<div>
       <h1>SNAKEBYTE</h1>
       <AddSnake/>
       <List snakes={this.state.snakes}/>
-      <Bitten/>
     </div>)
   }
 }
