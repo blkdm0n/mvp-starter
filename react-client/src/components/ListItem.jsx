@@ -2,15 +2,12 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    <a href="#">
-      <img src={props.item.link}/> 
+    <a href="#" onClick={() => console.log('I got a click')}>
+      <img src={props.item.photoLink}/> 
+      <h6> {props.item.species} </h6>
     </a>  
   </div>
 )
 
 export default ListItem;
 
-
-// //list user snakes
-//     Protocol: {props.item.link} <br/>
-//     Notes: {props.item.notes}
