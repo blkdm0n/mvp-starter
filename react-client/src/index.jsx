@@ -12,7 +12,7 @@ class App extends React.Component {
     //dummy data was here for now...needs to move to database
     //data moved to a json file in server retrieved by 'GET' request
       snakes: [],
-      isBitten: true
+      isBitten: true,
     }
   }
 
