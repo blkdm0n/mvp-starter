@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
+import AddSnake from './components/AddSnake.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,8 +53,6 @@ class App extends React.Component {
         this.setState({
           snakes: data
         })
-        console.log(data);
-        
       },
       error: (err) => {
         console.log('err', err);
@@ -65,6 +64,7 @@ class App extends React.Component {
     return (<div>
       <h1>SNAKEBYTE</h1>
       <List snakes={this.state.snakes}/>
+      <AddSnake/>
     </div>)
   }
 }

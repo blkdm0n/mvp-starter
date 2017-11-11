@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 class AddSnake extends React.Component {
   constructor(props) {
+  super(props);
   this.state = {
     species: '',
     photoLink: '',
@@ -27,19 +28,22 @@ class AddSnake extends React.Component {
   }
 
   render() {
-     <form onSubmit={this.handleSubmit} method='post'>
-        <label>
+     return(
+        <form onSubmit={this.handleSubmit} method='post'>
+          <label>
           Enter your snake's info:
-            <input type='text' value={this.state.species} placeholder='Enter the species here'><br/>
-            <input type='text' value={this.state.photoLink} placeholder = 'Add URL link to photo here'><br/>
-            <input type='text' value={this.state.biteProtocol} placeholder = 'Add URL link to bite protocol here'><br/>
-            <input type='text' value={this.state.notes} placeholder = 'add additional notes if you wish'>         
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+            <input type='text' value={this.state.species} placeholder='Enter the species here'/><br/>
+            <input type='text' value={this.state.photoLink} placeholder = 'Add URL link to photo here'/><br/>
+            <input type='text' value={this.state.biteProtocol} placeholder = 'Add URL link to bite protocol here'/><br/>
+            <input type='text' value={this.state.notes} placeholder = 'add additional notes if you wish'/>         
+         </label>
+          <input type="submit" value="Submit"/>
+        </form>
+    );
   }
 }
 
+export default AddSnake;
 
 
 
