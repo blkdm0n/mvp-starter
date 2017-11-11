@@ -9,11 +9,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-    //dummy data was here for now...needs to move to database
     //data moved to a json file in server retrieved by 'GET' request
       snakes: [],
-      isBitten: true,
+      isBitten: false
     }
+    //handle any bites
+    this.biteHandler = this.biteHandler.bind(this);
+  }
+
+  biteHandler(biter) {
+    //change state 
+      //isBitten
+      //send the Biter to the Bitten component to be rendered
+    this.setState({
+      isBitten: !isBitten,
+      biter: this.state.snakes[0]
+    })
+    event.preventDefault();
   }
 
   componentDidMount() {
@@ -32,6 +44,7 @@ class App extends React.Component {
   }
 
 
+
 render() {
   if (this.state.isBitten) {
     return (
@@ -43,10 +56,12 @@ render() {
   } 
     return (<div>
       <h1>SNAKEBYTE</h1>
-      <AddSnake/>
-      <List snakes={this.state.snakes}/>
+      <AddSnake />
+      <List onClick={this.biteHandler} snakes={this.state.snakes}/>
     </div>)
   }
 }
+
+
 
 ReactDOM.render(<App />, document.getElementById('app'));

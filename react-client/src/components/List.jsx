@@ -5,7 +5,7 @@ const List = (props) => (
   <div>
     <h4> Venomous Snake Collection </h4>
     There are { props.snakes.length } Snakes in your collection.
-    { props.snakes.map((snake, index) => <ListItem key ={index} item={snake}/>)}
+    { props.snakes.map((snake, index) => <ListItem key ={index} item={snake} onClick={props.biteHandler}/>)}
   </div>
 )
 

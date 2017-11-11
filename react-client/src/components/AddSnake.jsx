@@ -29,7 +29,6 @@ class AddSnake extends React.Component {
     //i am updating my data and sending it :) 
     //bodyparse will prevent empty bodies!!!!
     var snakeData = this.state.formValues;
-    console.log('inside submit', snakeData);
       
     $.ajax({
       method: 'POST',
@@ -37,6 +36,12 @@ class AddSnake extends React.Component {
       url: '/', 
       success: (data) => {
         console.log('data has been sent');  
+        this.setState({formValues:{
+          species: '',
+          photoLink: '',
+          biteProtocol: '',
+          notes: ''
+        }});
       },
       error: (err, data) => {
         console.log('The POST is not working');
@@ -56,12 +61,8 @@ class AddSnake extends React.Component {
   )
  }
 }
-
-
 export default AddSnake;
 
-//onsubmit, i need to reset the input fields
-  //reset funtion to set state???
 
 
 
