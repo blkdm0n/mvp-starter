@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 
 class AddSnake extends React.Component {
@@ -24,10 +25,24 @@ class AddSnake extends React.Component {
   }
 
   handleSubmit(event) {
-      event.preventDefault();
-      //add an ajax request to submit the data 
-      console.log(this.state.formValues);
-  }
+    event.preventDefault();
+    //i am updating my data and sending it :) 
+    //bodyparse will prevent empty bodies!!!!
+    var snakeData = this.state.formValues;
+    console.log('inside submit', snakeData);
+      
+    $.ajax({
+      method: 'POST',
+      data: JSON.stringify(snakeData),
+      url: '/', 
+      success: (data) => {
+        console.log('data has been sent');  
+      },
+      error: (err, data) => {
+        console.log('The POST is not working');
+      }
+    });
+  } 
 
   render(){
   return (
@@ -45,7 +60,8 @@ class AddSnake extends React.Component {
 
 export default AddSnake;
 
-
+//onsubmit, i need to reset the input fields
+  //reset funtion to set state???
 
 
 

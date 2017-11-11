@@ -6,8 +6,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+
+//bodyparser ensures that the body is NOT empty - USE BOTH!!!!
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.get('/', function (req, res) {
