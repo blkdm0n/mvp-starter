@@ -17,9 +17,8 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//can't use the same endpoint as a index file
+//can't use the same endpoint as a STATIC file DERPPPPPP!!!!!!
 app.get('/getsnakes', function (req, res) {
-  res.statusCode = 200;
   //console.log(fakeData);
   res.send(fakeData);
 });

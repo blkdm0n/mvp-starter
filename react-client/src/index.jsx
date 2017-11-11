@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
 import AddSnake from './components/AddSnake.jsx';
+import Bitten from './components/Bitten.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
     //dummy data was here for now...needs to move to database
+    //data moved to a json file retrieved by 'GET' request
       snakes: []
     }
   }
@@ -31,8 +33,9 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>SNAKEBYTE</h1>
-      <List snakes={this.state.snakes}/>
       <AddSnake/>
+      <List snakes={this.state.snakes}/>
+      <Bitten/>
     </div>)
   }
 }
