@@ -4,44 +4,47 @@ import ReactDOM from 'react-dom';
 
 class AddSnake extends React.Component {
   constructor(props) {
-  super(props);
-  this.state = {
-    species: '',
-    photoLink: '',
-    biteProtocol: '',
-    notes: ''
-  }
-  //binds our handleChange and handleSubmit methods
-  this.handleChange = this.handleChange.bind(this);
-  this.handleSubmit = this.handleSubmit.bind(this);
+    super(props)
+    this.state = {
+      formValues: {}
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //handles changes in form
   handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  //handles submit once complete
-  handleSubmit(event) {
-    alert(this.setState.value);
     event.preventDefault();
+    let formValues = this.state.formValues;
+    let name = event.target.name;
+    let value = event.target.value;
+
+    formValues[name] = value;
+
+    this.setState({formValues})
   }
 
-  render() {
-     return(
-        <form onSubmit={this.handleSubmit} method='post'>
-          <label>
-          Enter your snake's info:
-            <input type='text' value={this.state.species} placeholder='Enter the species here'/><br/>
-            <input type='text' value={this.state.photoLink} placeholder = 'Add URL link to photo here'/><br/>
-            <input type='text' value={this.state.biteProtocol} placeholder = 'Add URL link to bite protocol here'/><br/>
-            <input type='text' value={this.state.notes} placeholder = 'add additional notes if you wish'/>         
-         </label>
-          <input type="submit" value="Submit"/>
-        </form>
-    );
+  handleSubmit(event) {
+      event.preventDefault();
+      console.log(this.state.formValues);
   }
+
+  render(){
+  return (
+  <form onSubmit={this.handleSubmit}>
+    <input type="text" name="species" placeholder="Enter the species here" value={this.state.formValues["species"]} onChange={this.handleChange} />
+    <br/>
+    <input type="text" name="photoLink" placeholder="Enter URL address for photo" value={this.state.formValues["photoLink"]} onChange={this.handleChange}/>
+    <br/>
+    <input type="text" name="biteProtocol" placeholder="Enter the bite protocol URL here" value={this.state.formValues["biteProtocol"]} onChange={this.handleChange} />
+    <br/>
+    <input type="text" name="notes" placeholder="Enter additional notes here" value={this.state.formValues["notes"]} onChange={this.handleChange} />
+    <br/>
+    <input className="btn btn-primary" type="submit" value="Submit" />
+  </form>
+  )
+ }
 }
+
 
 export default AddSnake;
 
