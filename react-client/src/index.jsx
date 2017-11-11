@@ -22,8 +22,7 @@ class App extends React.Component {
       //isBitten
       //send the Biter to the Bitten component to be rendered
     this.setState({
-      isBitten: !isBitten,
-      biter: this.state.snakes[0]
+      isBitten: !isBitten
     })
     event.preventDefault();
   }
@@ -50,7 +49,7 @@ render() {
     return (
     <div>
       <h1>SNAKEBYTE</h1>
-      <Bitten/>
+      <Bitten snake={this.state.snakes[0]}/>
     </div>
     )
   } 
