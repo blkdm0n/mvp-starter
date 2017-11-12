@@ -57,5 +57,7 @@ class App extends React.Component {
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
-
+//we cannot use onClick on a React Component
+  //pass handler as prop => clickHandler = {this.myHandler}
+  //reference INSIDE our component using props.clickHandler
   
