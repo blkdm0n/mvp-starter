@@ -3,9 +3,9 @@ import ListItem from './ListItem.jsx';
 
 const List = (props) => (
   <div>
-    <h4> Venomous Snake Collection </h4>
+    <h4> <a href="#" onClick={props.clickHandler} >Venomous Snake Collection</a> </h4>
     There are { props.snakes.length } Snakes in your collection.
-    { props.snakes.map((snake, index) => <ListItem key ={index} item={snake} onClick={props.biteHandler}/>)}
+    { props.snakes.map((snake, index) => <ListItem key ={index} item={snake} />)}
   </div>
 )
 
