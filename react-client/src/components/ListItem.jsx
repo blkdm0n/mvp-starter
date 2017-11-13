@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListItem = (props) => (
   <div>
-    <a href="#" onClick={props.clickHandler}>
+    <a href="#" data-value={props.item} onClick={props.clickHandler}>
       <img src={props.item.photoLink}/> 
     </a>  
       <h6>{props.item.species}</h6>

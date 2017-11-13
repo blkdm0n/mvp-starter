@@ -16,7 +16,6 @@ class App extends React.Component {
     }
     //handle any bites
     this.biteHandler = this.biteHandler.bind(this);
-    //this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -34,20 +33,22 @@ class App extends React.Component {
     });
     }
 
-    biteHandler() {
+    biteHandler(biter) {
       //change state of isBitten will render Bitten component
       console.log('click on photo');
       this.setState({isBitten: true});
+      
     }
+
+    
     
 
     render() {
       if (this.state.isBitten) {
         return (
           <div>
-      <h1>SNAKEBYTE</h1>
-      <Bitten snake={this.state.snakes[0]}/>
-    </div>
+            <Bitten snake={this.state.snakes[0]}/>
+          </div>
     )
       } 
         return (<div>
@@ -63,4 +64,6 @@ ReactDOM.render(<App />, document.getElementById('app'));
 //we cannot use onClick on a React Component
   //pass handler as prop => clickHandler = {this.myHandler}
   //reference INSIDE our component using props.clickHandler
+//now that the click changes state
+ //how do i get the image that was clicked????
   
