@@ -16,6 +16,7 @@ class App extends React.Component {
     }
     //handle any bites
     this.biteHandler = this.biteHandler.bind(this);
+    //this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -35,8 +36,10 @@ class App extends React.Component {
 
     biteHandler() {
       //change state of isBitten will render Bitten component
-      console.log('click in list')
+      console.log('click on photo');
+      this.setState({isBitten: true});
     }
+    
 
     render() {
       if (this.state.isBitten) {
