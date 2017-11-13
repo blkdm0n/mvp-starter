@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var db = require('../database-mysql/index');
 
 //brought fakeData into server module
 var fakeData = require('../database-mongo/fakedata');
@@ -7,8 +8,7 @@ var fakeData = require('../database-mongo/fakedata');
 
 
 // UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-//var items = require('../database-mysql');
-//var items = require('../database-mongo');
+var items = require('../database-mysql');
 
 var app = express();
 
@@ -29,7 +29,28 @@ app.get('/getsnakes', function (req, res) {
 app.post('/', function (req, res) {
     res.statusCode = 201;
     res.send('Post successful!');
-    console.log(req.body);
+    
+    var species = req.body.species;
+    var photoLink = req.body.photoLink;
+    var biteProtocol = req.body.biteProtocol;
+    var notes = req.body.notes;
+    
+    //data parse for tables
+    var addedSnake = {
+      species: species,
+      photoLink: photoLink,
+      biteProtocol: biteProtocol,
+      notes: notes
+    };
+    
+    db.insertOne(addedSnake, (err) => {
+      if (err) {
+        console.log('error');
+      } else {
+        console.log('data sent');
+      }
+    })
+    
     //save req.body to database once connected
     //refresh page???
 });

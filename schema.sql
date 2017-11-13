@@ -1,13 +1,12 @@
-DROP DATABASE IF EXISTS test;
-
-CREATE DATABASE test;
-
-USE test;
-
-CREATE TABLE items (
+DROP DATABASE IF EXISTS snakes;
+CREATE DATABASE snakes;
+USE snakes;
+CREATE TABLE snakelist (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
+  species varchar(50),
+  photoLink varchar(200),
+  biteProtocol varchar(200),
+  notes varchar(200),
   PRIMARY KEY (ID)
 );
 

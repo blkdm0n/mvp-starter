@@ -47,7 +47,7 @@ class App extends React.Component {
       if (this.state.isBitten) {
         return (
           <div>
-            <Bitten snake={this.state.snakes[0]}/>
+            <Bitten snake={this.state.snakes[1]}/>
           </div>
     )
       } 
