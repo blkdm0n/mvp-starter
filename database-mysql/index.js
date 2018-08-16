@@ -35,6 +35,8 @@ var insertOne = function(addedSnake, callback) {
    addedSnake, function (err, result) {
     if (err) {
       console.log('Error adding data to database', err);
+    } else {
+      console.log(result);
     }
   });
 }

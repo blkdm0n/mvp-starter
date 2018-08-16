@@ -25,7 +25,7 @@ class App extends React.Component {
       dataType: 'json',
       success: (data) => {
         this.setState({snakes:data});
-        //console.log('you got data', data);
+        console.log('you got data', data);
       },
       error: (err) => {
         console.log('err', err);

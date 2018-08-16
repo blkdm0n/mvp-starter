@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 
 
 class AddSnake extends React.Component {
@@ -14,7 +13,7 @@ class AddSnake extends React.Component {
   }
 
   handleChange(event) {
-    event.preventDefault();
+    //event.preventDefault();
     let formValues = this.state.formValues;
     let name = event.target.name;
     let value = event.target.value;
@@ -34,8 +33,8 @@ class AddSnake extends React.Component {
       method: 'POST',
       data: JSON.stringify(snakeData),
       url: '/', 
-      success: (data) => {
-        console.log('data has been sent');  
+      success: function (data) {
+        console.log(`Post sent!`);  
         this.setState({formValues:{
           species: '',
           photoLink: '',
